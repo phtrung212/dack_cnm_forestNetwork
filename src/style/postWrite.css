@@ -1,0 +1,25 @@
+.postWrite
+{
+
+    margin-bottom: 50px;
+}
+.paper
+{
+    height: 50px;
+}
+.avatar
+{
+    margin: 5px;
+
+    float: left;
+}
+.avatarIcon
+{
+    background-color: #ff0000!important;
+}
+.placeholder
+{
+
+    width: 300px;
+    height: 40px;
+}
