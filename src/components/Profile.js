@@ -16,6 +16,8 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Chip from '@material-ui/core/Chip';
 import Following from '@material-ui/icons/Favorite';
+import Follower from '@material-ui/icons/Face';
+
 
 const styles = theme => ({
     root: {
@@ -71,6 +73,9 @@ const styles = theme => ({
     icon:{
         color:'#F00000'
     },
+    textField:{
+        width:'300px',
+    },
 });
 
 class Profile extends React.Component{
@@ -112,7 +117,7 @@ class Profile extends React.Component{
                                     <div className={classes.displayname}>
                                         Trung
                                     </div>
-                                    <Chip avatar={<Following className={classes.icon}/>} label="Followers: 10" className={classes.chip} />
+                                    <Chip avatar={<Follower className={classes.icon}/>} label="Followers: 10" className={classes.chip} />
                                     <Chip avatar={<Following className={classes.icon}/>} label="Following: 100" className={classes.chip} />
                                 </div >
                                 <div className={classes.editProfile}>
@@ -122,19 +127,16 @@ class Profile extends React.Component{
                                         onClose={this.handleClose}
                                         aria-labelledby="form-dialog-title"
                                     >
-                                        <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
+                                        <DialogTitle id="form-dialog-title">Edit profile</DialogTitle>
                                         <DialogContent>
-                                            <DialogContentText>
-                                                To subscribe to this website, please enter your email address here. We will send
-                                                updates occasionally.
-                                            </DialogContentText>
+
                                             <TextField
                                                 autoFocus
                                                 margin="dense"
                                                 id="name"
-                                                label="Email Address"
-                                                type="email"
+                                                label="Your display name"
                                                 fullWidth
+                                                className={classes.textField}
                                             />
                                         </DialogContent>
                                         <DialogActions>
@@ -142,7 +144,7 @@ class Profile extends React.Component{
                                                 Cancel
                                             </Button>
                                             <Button onClick={this.handleClose} color="primary">
-                                                Subscribe
+                                                Update
                                             </Button>
                                         </DialogActions>
                                     </Dialog>
